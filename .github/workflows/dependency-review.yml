@@ -1,0 +1,14 @@
+name: Dependency Review
+
+on:
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Dependency Review
+        uses: github/dependency-review-action@v2
